@@ -148,11 +148,8 @@ The Constitution is a document that contains the governing principles, coding
 standards, and technical guidelines for your project.
 
 1.  Start a **new chat session** with copilot.
-1.  Here you have few options:
-    1.  Run the `/speckit.constitution` and add the repos ready made README.md
-        as context.
-    1.  Alternatively, run the `/speckit.constitution` command with a prompt
-        describing your desired standards.
+1.  Run the `/speckit.constitution` command with a prompt
+        describing your requirement and desired standards.
 
     **Example Prompt:**
 

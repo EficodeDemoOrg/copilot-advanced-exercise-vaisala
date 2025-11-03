@@ -4,14 +4,15 @@ description: "Execute structured interview workflow to create project CONSTITUTI
 ---
 ⚠️ CRITICAL: You MUST ask ALL 12 questions. Track progress with explicit counters.
 
-⚠️ **MANDATORY TOOL**: You MUST use the #todo tool to track progress through all 12 questions. Update the todo list after each answer received.
+⚠️ **MANDATORY TOOL**: You MUST use the #todos tool to track progress through all 12 questions. Update the todo list after each answer received.
 
 # PHASE 1: INITIALIZATION
 1. Read `README.md` completely
-2. Create your TODO list using #todo:
+2. Create your TODO list using #todos:
    ```
-   #todo
+   #todos
    - [ ] Read README.md
+   - [ ] Ask to choose the project to implement from the options described in README.md
    - [ ] Create INITIALIZER_LOG.md
    - [ ] Ask Question 1 of 12
    - [ ] Ask Question 2 of 12
