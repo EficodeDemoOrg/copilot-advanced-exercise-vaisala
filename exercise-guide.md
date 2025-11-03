@@ -1,6 +1,6 @@
 # Introduction
 
-This guide walks you through building the Context Window Visualizer project. It
+This guide walks you through building your chosen project. It
 offers two distinct paths for you to explore different AI-driven development
 methodologies:
 
@@ -74,7 +74,7 @@ building the same project but with different tools and processes.
 
 This path uses the `spec-kit` to drive the development process. It's a more automated and opinionated approach.
 
-This guide walks you through building the Context Window Visualizer project
+This guide walks you through building the chosen project
 using the `spec-kit` development workflow. You'll use the `specify` CLI and a
 series of structured commands to direct a single AI agent from project
 initialization to a complete implementation.
@@ -128,17 +128,17 @@ assistant.
 1.  Run the `init` command:
 
     ```bash
-    specify init context-window-visualizer --ai copilot
+    specify init folder-for-your-project --ai copilot
     ```
 
 1.  Navigate into the newly created directory:
 
     ```bash
-    cd context-window-visualizer
+    cd folder-for-your-project
     ```
 
 **Your responsibility:** Ensure the command completes successfully. You should
-see a new `context-window-visualizer` folder.
+see a new `folder-for-your-project` folder.
 
 ### Phase 2: Define Project Principles
 
@@ -177,9 +177,9 @@ Focus on features and behavior, not technical implementation.
 
     **Example Prompt:**
 
-    ```
-    /speckit.specify Build a web application that helps developers visualize the context window of a large language model. The user should be able to add different types of content (like code blocks, plain text, and image placeholders) and see a visual representation of how much space each item consumes in the context window. The total context size should be configurable.
-    ```
+        ```
+        /speckit.specify Build a Road Safety Alert Dashboard web application that helps drivers and transportation professionals make informed decisions about road safety by visualizing real-time and forecasted road weather conditions using the Xweather Road Weather Conditions API.
+        ```
 
 This will generate a `spec.md` file, capturing the core requirements of your
 project.
@@ -340,7 +340,7 @@ collaboration.
 
 ### Introduction
 
-This guide walks you through building the Context Window Visualizer project
+This guide walks you through building the  project
 using the multi-agent development workflow. You'll direct specialized AI agents
 through different phases, from project initialization to implementing your first
 epic.
@@ -394,8 +394,7 @@ This is current VS Code behavior and easy to miss!
 1.  Run: `/init_project`
 
 The Initializer will conduct a 12-question interview about your technical
-choices. For this project, JavaScript/TypeScript with React is recommended, but
-you can choose your preferred stack.
+choices. You can choose your preferred stack.
 
 **Your responsibility:** Answer all 12 questions thoughtfully. These decisions
 will guide every subsequent agent.
