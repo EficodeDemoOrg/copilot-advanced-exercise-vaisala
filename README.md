@@ -102,15 +102,15 @@ Implement the following core features:
 ## Project 2 - Winter Road Safety Dashboard
 
 ### Objective
-Build a real-time road safety monitoring dashboard that helps winter maintenance teams and transportation professionals visualize road conditions from mobile observations using the Vaisala RoadAI API. The application will display computer vision-detected hazards, surface conditions, and provide safety scoring for different routes.
+Build a real-time winter road safety monitoring dashboard that helps winter maintenance teams visualize road conditions from mobile observations using the Vaisala RoadAI API. The application will display MD30 road weather measurements and RoadAI road weather classifications to support winter maintenance decision-making.
 
 ### Goal
 Practice the agentic workflow (either spec-kit or manual multi-agent approach) to develop a complete, functional web application from initial specification through implementation. Learn to decompose a complex project into manageable epics and tasks while maintaining consistency through shared documentation artifacts.
 
 ### Scenario
-**You are a developer tasked with creating a road safety monitoring tool for a city's winter maintenance department.** Winter weather is approaching, and the operations team uses camera-equipped vehicles to monitor road conditions throughout the city. They need a dashboard to visualize this data in real-time, showing detected ice patches, snow coverage, potholes, and other hazards. The tool should help them prioritize routes for treatment (salting, plowing) and identify dangerous conditions before they cause accidents.
+**You are a developer tasked with creating a winter road monitoring tool for a city's winter maintenance department.** Winter weather is approaching, and the operations team uses MD30-equipped vehicles to monitor road conditions throughout the city. They need a dashboard to visualize this data in real-time, showing road surface conditions (dry, wet, ice, snow), surface temperatures, and winter-specific hazards. The tool should help them prioritize routes for treatment (salting, plowing) and identify dangerous conditions before they cause accidents.
 
-The maintenance team has access to the Vaisala RoadAI system, which uses computer vision to analyze road conditions from vehicle-mounted cameras. Your dashboard needs to make this data accessible and actionable.
+The maintenance team has access to the Vaisala RoadAI system, which uses MD30 sensors and computer vision to analyze winter road conditions from vehicle-mounted equipment. Your dashboard needs to make this data accessible and actionable for winter maintenance operations.
 
 ### Required Features
 
@@ -123,40 +123,42 @@ Implement the following core features:
 - Display location data on a map or as coordinates
 - Handle pagination for large datasets (30 records per page)
 
-#### 2. Road Condition Visualization
-- Display detected surface conditions from computer vision analysis
-- Show key parameters:
+#### 2. Winter Road Condition Visualization
+- Display MD30 road weather measurements
+- Show key winter parameters:
   - Surface state (dry, wet, slush, snow, ice)
   - Surface temperature
   - Ice/snow layer thickness (when present)
-- Use color-coded indicators for different conditions
-- Display AI confidence scores for detections
+  - Road surface friction estimates
+  - Dew point temperature
+- Use color-coded indicators for different winter conditions
+- Display RoadAI road weather classification results
+- Show AI confidence scores for winter condition detections
 
-#### 3. Hazard Detection Dashboard
-- Show detected potholes with severity levels
-- Display infrastructure defects (cracks, deterioration)
-- List condition ratings (1-5 scale) and recommended actions (fix, monitor, ok)
-- Provide links to video/image frames from detections
-- Show detection confidence and localization accuracy
+#### 3. Winter Maintenance Decision Support
+- Display winter-specific hazard indicators (ice formation risk, snow accumulation)
+- Show recommended maintenance actions based on conditions
+- Visualize treatment priority areas (routes needing immediate salting/plowing)
+- Present time-series data showing condition changes over winter operations
+- Highlight critical thresholds (freezing temps, ice detection, heavy snow)
 
 ### API Information
 
 - **Base URL**: `https://api.vionice.io/api/v1`
 - **Authentication**: API key (query parameter `apikey`) OR username/password to obtain auth token
 - **Key Endpoints**:
-  - `/mobileObservations` - Road condition data from vehicles
+  - `/mobileObservations` - Road condition data from MD30-equipped vehicles
   - `/shares` - Access available data shares
-  - `/parameters` - List of observation parameter types
-  - `/potholes` - Detected pothole hazards
-  - `/trafficSigns` - Detected traffic signs
-  - `/surfaceMarkings` - Detected surface markings
+  - `/parameters` - List of observation parameter types (focus on winter weather parameters)
 - **Documentation**: [Vaisala RoadAI API Swagger](https://swagger.vionice.io/)
 
 **Important Notes:**
 - The API uses pagination (default 30 records, max 100 per request)
 - Location data is returned as GeoJSON (Point, LineString, etc.)
-- Computer vision parameters have confidence scores
-- Some observations may include video URLs for visual verification
+- MD30 measurements include surface state, temperature, and friction estimates
+- RoadAI road weather classifications have confidence scores
+- Winter maintenance operations typically don't record high-resolution video
+- Focus on MD30 sensor data and road weather parameters for winter conditions
 - Consider implementing request caching to minimize API calls
 
 ---
